@@ -65,7 +65,7 @@ module.exports = function (source, options) {
   }
 
   // construct headers
-  Object.keys(source.headersObj).sort().forEach(function (key) {
+  Object.keys(source.headersObj).forEach(function (key) {
     const header = util.format('%s: %s', key, source.headersObj[key])
     code.push('%s %s', opts.short ? '-H' : '--header', helpers.quote(header))
   })
