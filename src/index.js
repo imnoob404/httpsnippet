@@ -76,9 +76,9 @@ HTTPSnippet.prototype.prepare = function (request) {
     const http2VersionRegex = /^HTTP\/2/
     request.headersObj = request.headers.reduce(function (headers, header) {
       let headerName = header.name
-      if (request.httpVersion.match(http2VersionRegex)) {
-        headerName = headerName.toLowerCase()
-      }
+      //if (request.httpVersion.match(http2VersionRegex)) {
+        //headerName = headerName.toLowerCase()
+      //}
 
       headers[headerName] = header.value
       return headers
